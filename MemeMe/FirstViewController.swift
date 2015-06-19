@@ -10,16 +10,30 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+//    @IBOutlet weak var tableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+//        tableView.delegate = self
+//        tableView.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-
+    
+//    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return 2 //memes.count
+//    }
+//
+//    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("tableViewCell") as! UITableViewCell
+//        cell.textLabel?.text = "Hello"
+//        cell.detailTextLabel?.text = "I am here"
+//        
+//        return cell
+//    }
+    
 }
 
