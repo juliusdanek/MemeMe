@@ -22,5 +22,3 @@ struct Meme {
         self.memedImage = memedImage
     }
 }
-
-var memes = [Meme]()

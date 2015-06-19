@@ -8,18 +8,47 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var labelText: UILabel!
+    
+    var memes: [Meme]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        tableView.delegate = self
+        tableView.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        let object = UIApplication.sharedApplication().delegate
+        let appDelegate = object as! AppDelegate
+        memes = appDelegate.memes
+        //important to make sure that tableData refreshes after something has been added to the memes array
+        tableView.reloadData()
+        if memes.count != 0 {
+            tableView.hidden = false
+            labelText.hidden = true
+        }
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return memes.count
     }
 
-
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("TableViewCell") as! UITableViewCell
+        cell.textLabel?.text = memes[indexPath.row].topText
+        cell.imageView?.image = memes[indexPath.row].image
+        //separator insets to zero in order to have line stretch across full view
+        return cell
+    }
+    
 }
 
