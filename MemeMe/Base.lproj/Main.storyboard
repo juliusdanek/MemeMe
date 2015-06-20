@@ -329,7 +329,7 @@
                         <viewControllerLayoutGuide type="bottom" id="NgS-9E-rMH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4eI-9f-3ng">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vUL-5e-obf">
@@ -367,13 +367,13 @@
                                 <exclude reference="hAj-9Y-NGw"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="DzG-mP-yWz"/>
+                                <exclude reference="2j6-3C-Oid"/>
+                                <exclude reference="gKc-PR-dup"/>
                                 <exclude reference="3R5-Ws-OI6"/>
                                 <exclude reference="KYf-0c-MO9"/>
                                 <exclude reference="Kim-9k-cqx"/>
                                 <exclude reference="abi-uF-ahm"/>
-                                <exclude reference="2j6-3C-Oid"/>
-                                <exclude reference="gKc-PR-dup"/>
-                                <exclude reference="DzG-mP-yWz"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -382,13 +382,13 @@
                                 <include reference="hAj-9Y-NGw"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="DzG-mP-yWz"/>
+                                <include reference="2j6-3C-Oid"/>
+                                <include reference="gKc-PR-dup"/>
                                 <include reference="3R5-Ws-OI6"/>
                                 <include reference="KYf-0c-MO9"/>
                                 <include reference="Kim-9k-cqx"/>
                                 <include reference="abi-uF-ahm"/>
-                                <include reference="2j6-3C-Oid"/>
-                                <include reference="gKc-PR-dup"/>
-                                <include reference="DzG-mP-yWz"/>
                             </mask>
                         </variation>
                     </view>
@@ -622,7 +622,6 @@
         <!--Navigation Controller-->
         <scene sceneID="LYc-uz-9ls">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1qS-48-D7e" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C0Z-QW-fXp" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2cX-fu-u2k">
@@ -637,6 +636,7 @@
                         <segue destination="Oya-Eh-XZ4" kind="relationship" relationship="rootViewController" id="sNU-Sl-bhy"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1qS-48-D7e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1977" y="378"/>
         </scene>
@@ -648,6 +648,6 @@
         <image name="table" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mvz-b0-wNR"/>
+        <segue reference="MTo-YI-ecF"/>
     </inferredMetricsTieBreakers>
 </document>

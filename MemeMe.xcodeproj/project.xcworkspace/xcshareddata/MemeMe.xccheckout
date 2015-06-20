@@ -5,16 +5,26 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
+<<<<<<< Updated upstream
 	<string>C24FE303-83B4-4391-97A3-582F0E7EFA09</string>
 	<key>IDESourceControlProjectName</key>
 	<string>project</string>
+=======
+	<string>795D5F93-05DA-44D6-BEAB-F80C88E3D62E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MemeMe</string>
+>>>>>>> Stashed changes
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>C55C4581B211EA60CD00780FA3FE31D6A897B6DB</key>
 		<string>https://github.com/juliusdanek/MemeMe.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
+<<<<<<< Updated upstream
 	<string>MemeMe.xcodeproj/project.xcworkspace</string>
+=======
+	<string>MemeMe.xcodeproj</string>
+>>>>>>> Stashed changes
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>C55C4581B211EA60CD00780FA3FE31D6A897B6DB</key>
