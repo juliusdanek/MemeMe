@@ -51,16 +51,24 @@ class SecondViewController: UIViewController, UICollectionViewDelegateFlowLayout
         return cell
     }
     
+    //push detailview programmatically
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
         let vc: detailVC = self.storyboard?.instantiateViewControllerWithIdentifier("detailVC") as! detailVC
         
         vc.meme = memes[indexPath.row]
+        vc.index = indexPath.row
         
         self.navigationController?.pushViewController(vc, animated: true)
         
         
     }
+    
+    
+    //MARK: Edit view
+    
+    //tell collection that it can edit all rows
+    //Not implementing this
 
 
 }
