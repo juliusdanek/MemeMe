@@ -45,9 +45,19 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("TableViewCell") as! UITableViewCell
         cell.textLabel?.text = memes[indexPath.row].topText
-        cell.imageView?.image = memes[indexPath.row].image
+        cell.imageView?.image = memes[indexPath.row].memedImage
         //separator insets to zero in order to have line stretch across full view
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let vc: detailVC = self.storyboard?.instantiateViewControllerWithIdentifier("detailVC") as! detailVC
+        
+        vc.meme = memes[indexPath.row]
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
     
 }
