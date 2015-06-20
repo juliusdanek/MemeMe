@@ -14,6 +14,7 @@ struct Meme {
     var topText: String
     var image: UIImage
     var memedImage: UIImage
+    let dateCreated = NSDate()
     
     init (bottomText: String, topText: String, image: UIImage, memedImage: UIImage) {
         self.bottomText = bottomText

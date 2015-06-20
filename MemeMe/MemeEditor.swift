@@ -23,14 +23,23 @@ class MemeEditor: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     //instantiating imagePickerController
     let imagePicker = UIImagePickerController()
     
+    //having a meme in case you edit from detail view
+    var editMeme: Meme?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
         topField.delegate = self
         bottomField.delegate = self
         //defining text here so edits do not get lost when loading image
-        self.topField.text = "TOP"
-        self.bottomField.text = "BOTTOM"
+        if let editedMeme = editMeme {
+            self.topField.text = editedMeme.topText
+            self.bottomField.text = editedMeme.bottomText
+            self.imageDisplay.image = editedMeme.image
+        } else {
+            self.topField.text = "TOP"
+            self.bottomField.text = "BOTTOM"
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
