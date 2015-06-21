@@ -98,7 +98,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(true)
         self.tableView.setEditing(false, animated: true)
-        self.editButton.title = "Edit"
+        editButton.title = "Edit"
     }
     
     //delete from memes.count
@@ -113,10 +113,10 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         //if there are no more memes, end editing mode and disable the button and go back to default view
         if memes.count == 0 {
             self.tableView.setEditing(false, animated: false)
-            self.editButton.title = "Edit"
-            self.editButton.enabled = false
+            editButton.title = "Edit"
+            editButton.enabled = false
             self.tableView.hidden = true
-            self.labelText.hidden = false
+            labelText.hidden = false
         }
     }
     

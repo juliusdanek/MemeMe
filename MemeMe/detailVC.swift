@@ -19,14 +19,14 @@ class detailVC: UIViewController {
     var index: Int!
     
     override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(true)
+        super.viewWillAppear(animated)
         imageView.image = meme.memedImage
         //hide tab bar
         self.tabBarController?.tabBar.hidden = true
     }
     
     override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(true)
+        super.viewWillDisappear(animated)
         //make it appear again when navigating away
         self.tabBarController?.tabBar.hidden = false
     }

@@ -33,12 +33,12 @@ class MemeEditor: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         bottomField.delegate = self
         //defining text here so edits do not get lost when loading image
         if let editedMeme = editMeme {
-            self.topField.text = editedMeme.topText
-            self.bottomField.text = editedMeme.bottomText
-            self.imageDisplay.image = editedMeme.image
+            topField.text = editedMeme.topText
+            bottomField.text = editedMeme.bottomText
+            imageDisplay.image = editedMeme.image
         } else {
-            self.topField.text = "TOP"
-            self.bottomField.text = "BOTTOM"
+            topField.text = "TOP"
+            bottomField.text = "BOTTOM"
         }
     }
     
@@ -46,11 +46,11 @@ class MemeEditor: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         super.viewWillAppear(true)
         //Check wehther sourcetype camera is available. If not, disable the button.
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(.Camera)
-        self.bottomField.defaultTextAttributes = memeTextAttributes
-        self.bottomField.textAlignment = .Center
-        self.topField.defaultTextAttributes = memeTextAttributes
-        self.topField.textAlignment = .Center
-        self.subscribeToKeyboardNotifications()
+        bottomField.defaultTextAttributes = memeTextAttributes
+        bottomField.textAlignment = .Center
+        topField.defaultTextAttributes = memeTextAttributes
+        topField.textAlignment = .Center
+        subscribeToKeyboardNotifications()
         if imageDisplay.image == nil {
             actionButton.enabled = false
         } else {
@@ -125,7 +125,7 @@ class MemeEditor: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         if bottomField.isFirstResponder() {
             println("origin y is \(self.view.frame.origin.y)")
             println("keyBoardHeight is \(getKeyboardHeight(notification))")
-            self.view.frame.origin.y -=  getKeyboardHeight(notification)
+            self.view.frame.origin.y =  -getKeyboardHeight(notification)
         }
     }
     
@@ -134,7 +134,7 @@ class MemeEditor: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         if bottomField.isFirstResponder() {
             println(self.view.frame.origin.y)
             println(getKeyboardHeight(notification))
-            self.view.frame.origin.y += getKeyboardHeight(notification)
+            self.view.frame.origin.y = 0
         }
     }
     
