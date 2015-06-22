@@ -22,13 +22,13 @@ class detailVC: UIViewController {
         super.viewWillAppear(animated)
         imageView.image = meme.memedImage
         //hide tab bar
-        self.tabBarController?.tabBar.hidden = true
+        tabBarController?.tabBar.hidden = true
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         //make it appear again when navigating away
-        self.tabBarController?.tabBar.hidden = false
+        tabBarController?.tabBar.hidden = false
     }
     
     //MARK: Edit the image
